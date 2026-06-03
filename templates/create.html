@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Создать карточку</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Новая запись</h2>
+        <form action="{{ url_for('form_create') }}" method="POST">
+            <input type="text" name="title" placeholder="Заголовок" required>
+            <input type="text" name="subtitle" placeholder="Подзаголовок" required>
+            <textarea name="text" placeholder="Текст карточки" rows="5" required></textarea>
+            <button type="submit">Сохранить</button>
+            <a href="{{ url_for('index') }}">Отмена</a>
+        </form>
+    </div>
+</body>
+</html>

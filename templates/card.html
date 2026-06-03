@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ card.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ card.title }}</h1>
+        <h3>{{ card.subtitle }}</h3>
+        <p>{{ card.text }}</p>
+        <a href="{{ url_for('index') }}">← Назад к записям</a>
+    </div>
+</body>
+</html>
